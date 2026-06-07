@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Diplomat's Archive — An elite smart book finder forged in the tradition of British strategic intelligence." />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>The Diplomat's Archive — Est. MDCCCXLV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Parallax Layers -->
+    <div id="parallax-layer-library" class="parallax-layer"></div>
+    <div id="parallax-layer-london" class="parallax-layer"></div>
+    <div class="glass-overlay"></div>
+
+    <!-- London Fog Particle Canvas -->
+    <canvas id="fog-canvas"></canvas>
+
+    <!-- Victorian Corner Ornaments -->
+    <div class="corner-ornament top-left">❧</div>
+    <div class="corner-ornament top-right">❧</div>
+    <div class="corner-ornament bottom-left">❧</div>
+    <div class="corner-ornament bottom-right">❧</div>
+
+    <main id="app">
+
+      <!-- Royal Crest Header -->
+      <header class="hero">
+        <div class="crest-container">
+          <svg class="royal-crest" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Shield -->
+            <path d="M100 10 L180 50 L180 130 Q180 190 100 210 Q20 190 20 130 L20 50 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+            <path d="M100 20 L170 55 L170 128 Q170 183 100 200 Q30 183 30 128 L30 55 Z" fill="rgba(2,43,34,0.6)" stroke="rgba(212,175,55,0.3)" stroke-width="1"/>
+            <!-- Crown -->
+            <path d="M60 55 L75 30 L90 48 L100 20 L110 48 L125 30 L140 55" fill="none" stroke="#d4af37" stroke-width="2" stroke-linejoin="round"/>
+            <line x1="60" y1="55" x2="140" y2="55" stroke="#d4af37" stroke-width="2"/>
+            <!-- Lion (stylized) -->
+            <text x="100" y="120" text-anchor="middle" font-family="serif" font-size="50" fill="#d4af37" opacity="0.8">♚</text>
+            <!-- Motto Banner -->
+            <text x="100" y="160" text-anchor="middle" font-family="Cinzel, serif" font-size="9" fill="#d4af37" letter-spacing="2">SCIENTIA</text>
+            <text x="100" y="175" text-anchor="middle" font-family="Cinzel, serif" font-size="9" fill="#d4af37" letter-spacing="2">POTENTIA EST</text>
+          </svg>
+        </div>
+        <h1 class="glitch-title" data-text="The Diplomat's Archive">The Diplomat's Archive</h1>
+        <div class="ornate-divider">
+          <span class="divider-wing">━━━━ ❖ ━━━━</span>
+        </div>
+        <p class="subtitle">Classified Strategic Insights &bull; Est. MDCCCXLV</p>
+        <p class="latin-motto">"Imperium in imperio — A sovereign power within a sovereign power"</p>
+      </header>
+
+      <!-- Victorian Section Divider -->
+      <div class="victorian-divider">
+        <span class="vd-line"></span>
+        <span class="vd-ornament">⚜</span>
+        <span class="vd-line"></span>
+      </div>
+
+      <!-- Search Section -->
+      <section class="search-section" id="search-section">
+        <p class="section-label">⊹ Secure Intelligence Query Terminal ⊹</p>
+        <div class="search-glass-panel">
+          <div class="gaslight-glow left"></div>
+          <div class="gaslight-glow right"></div>
+          <div class="search-input-wrapper">
+            <span class="input-prefix">⟐</span>
+            <input type="text" id="search-input" placeholder="Enter query... diplomacy, strategy, empire..." autocomplete="off" spellcheck="false" />
+            <div class="scan-line"></div>
+          </div>
+          <button id="search-btn">
+            <span class="btn-text">Initiate Scan</span>
+            <div class="btn-glint"></div>
+          </button>
+        </div>
+        <div class="search-tags">
+          <span class="tag" data-query="diplomacy">Diplomacy</span>
+          <span class="tag" data-query="war">War & Strategy</span>
+          <span class="tag" data-query="empire">Empire</span>
+          <span class="tag" data-query="intelligence">Intelligence</span>
+          <span class="tag" data-query="philosophy">Philosophy</span>
+        </div>
+      </section>
+
+      <!-- Results Section -->
+      <section class="results-section">
+        <div class="loader" id="loader">
+          <div class="spinner"></div>
+          <span>Accessing Her Majesty's Secure Database...</span>
+        </div>
+        <div id="results-count" class="results-count hidden"></div>
+        <div id="results-grid" class="grid hidden">
+          <!-- Book Cards injected by JS -->
+        </div>
+      </section>
+
+      <!-- Victorian Section Divider -->
+      <div class="victorian-divider" style="margin-top: 4rem;">
+        <span class="vd-line"></span>
+        <span class="vd-ornament">⚜</span>
+        <span class="vd-line"></span>
+      </div>
+
+      <!-- Footer -->
+      <footer class="regal-footer">
+        <div class="footer-crest">♛</div>
+        <p class="footer-text">By Appointment to the Crown &bull; Diplomatic Intelligence Division</p>
+        <p class="footer-sub">London &bull; Whitehall &bull; Est. MDCCCXLV</p>
+        <div class="ornate-divider small">
+          <span class="divider-wing">━ ❖ ━</span>
+        </div>
+        <p class="footer-latin">"Fiat justitia ruat caelum"</p>
+      </footer>
+
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
